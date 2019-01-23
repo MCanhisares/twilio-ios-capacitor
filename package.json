@@ -1,7 +1,7 @@
 {
   "name": "twilio-ios-capacitor",
-  "version": "0.0.1",
-  "description": "This plugin is used to make video calls using Twilio's video platform on iOS",
+  "version": "0.0.1-beta.9",
+  "description": "This plugin is used to make video calls using Twilio video platform on iOS",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {

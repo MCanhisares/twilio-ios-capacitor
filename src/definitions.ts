@@ -5,5 +5,5 @@ declare global {
 }
 
 export interface TwilioIosCapacitorPlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  joinTwilioRoom(options: {roomName: String, accessToken: String}): Promise<any>;  
 }
