@@ -16,6 +16,7 @@ class TwilioVideoViewController: UIViewController {
     @IBOutlet weak var previewView: TVIVideoView!
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
     
     var room: TVIRoom?
     var camera: TVICameraSource?
@@ -37,33 +38,32 @@ class TwilioVideoViewController: UIViewController {
         } else {
             // Preview our local camera track in the local video preview view.
             self.startPreview()
-        }
-        
-        // Disconnect and mic button will be displayed when the Client is connected to a Room.
-        self.disconnectButton.isHidden = true
-        self.micButton.isHidden = true
+        }                
         
         self.connect()
     }
     
     @IBAction func disconnect(_ sender: Any) {
         self.room!.disconnect()
+        self.dismiss(animated: true, completion: nil)
         print("Attempting to disconnect from room \(room!.name)")
     }
     
     @IBAction func toggleMic(_ sender: Any) {
-        if (self.localAudioTrack != nil) {
-            self.localAudioTrack?.isEnabled = !(self.localAudioTrack?.isEnabled)!
-            
-            // Update the button title
-            if (self.localAudioTrack?.isEnabled == true) {
-                self.micButton.setTitle("Mute", for: .normal)
-            } else {
-                self.micButton.setTitle("Unmute", for: .normal)
-            }
-        }
+        guard self.localAudioTrack != nil else { return }
+        self.localAudioTrack!.isEnabled = !self.localAudioTrack!.isEnabled
+        
+        // Update the button state
+        self.micButton.isSelected = !self.localAudioTrack!.isEnabled
     }
     
+    @IBAction func toggleCamera(_ sender: Any) {
+        guard self.localVideoTrack != nil else { return }
+        self.localVideoTrack?.isEnabled = !self.localVideoTrack!.isEnabled
+        
+        //Update the button state
+        self.micButton.isSelected = !self.localAudioTrack!.isEnabled
+    }
     @IBAction func flipCamera(_ sender: Any) {
         var newDevice: AVCaptureDevice?
         

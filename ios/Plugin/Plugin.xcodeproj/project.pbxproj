@@ -18,6 +18,7 @@
 		E8BCA7E121F8F6A200B2604F /* TwilioVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCA7DF21F8F6A200B2604F /* TwilioVideoViewController.swift */; };
 		E8BCA7E221F8F6A200B2604F /* TwilioVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8BCA7E021F8F6A200B2604F /* TwilioVideoViewController.xib */; };
 		E8BCA7E521F8F85F00B2604F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCA7E421F8F85F00B2604F /* Utils.swift */; };
+		E8BDF9CA21FA692B0035BF72 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BDF9C921FA692B0035BF72 /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E8BCA7DF21F8F6A200B2604F /* TwilioVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioVideoViewController.swift; sourceTree = "<group>"; };
 		E8BCA7E021F8F6A200B2604F /* TwilioVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwilioVideoViewController.xib; sourceTree = "<group>"; };
 		E8BCA7E421F8F85F00B2604F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E8BDF9C921FA692B0035BF72 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		F65BB2953ECE002E1EF3E424 /* Pods-PluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PluginTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PluginTests/Pods-PluginTests.release.xcconfig"; sourceTree = "<group>"; };
 		F6753A823D3815DB436415E3 /* Pods_PluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,9 +142,18 @@
 		E8BCA7E321F8F84600B2604F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8BDF9C821FA5EDD0035BF72 /* Assets */,
 				E8BCA7E421F8F85F00B2604F /* Utils.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		E8BDF9C821FA5EDD0035BF72 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E8BDF9C921FA692B0035BF72 /* assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BDF9CA21FA692B0035BF72 /* assets.xcassets in Resources */,
 				E8BCA7E221F8F6A200B2604F /* TwilioVideoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
